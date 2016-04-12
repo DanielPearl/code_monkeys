@@ -6,7 +6,7 @@ def is_letter(letter):
     """
     determines if ascii of char is within given range
     :param letter: string
-    :returns: boolean
+    :return: boolean
     """
     lowercase = letter.lower()
     ascii_val = ord(lowercase)
@@ -17,7 +17,7 @@ def is_panagram(sentence):
     """
     Determines if sentence is param
     :param sentence: string
-    :returns: boolean
+    :return: boolean
     """
     letter_dict = {}
     for i in sentence:

@@ -1,14 +1,24 @@
-d = {"key1":{"dict1","dict2"}, "key2":None, "key3":["list1",True]}
+import json
+
+d = [{"key":"value"},5,"string",["string",4]]
 
 def json_to_string(d):
-        print(d)
+        # print(d)
         new = d
         while len(new) > 0:
             for key in d:
-                if type(d[key]) != dict and type(d[key]) != list:
+                print(key)
+                print(type(d[key]))
+                if type(d[key]) == dict:
                     return "{" + "{0}:{1}".format(key, d[key]) + "}"
                 else:
                     del new[key]
                     return json_to_string(d)
 
+def json_loads(d):
+    jstring = json.dumps(d)
+    return jstring
+
 print(json_to_string(d))
+print(d)
+print(json_loads(d))

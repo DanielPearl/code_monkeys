@@ -1,7 +1,14 @@
+#Determine if brackets in a given string/list are closed. Return True if all brackets are closed and False if any brackets are open.
+
 from stack import Stack
 
 b = "{}[]()}"
 def to_list(b):
+    """
+    Appends items in string to a list
+    :param b: string
+    :return: list
+    """
     l = []
     for s in b:
         l.append(s)
@@ -10,6 +17,11 @@ def to_list(b):
 l = to_list(b)
 
 def brackets(l):
+    """
+    Determines if all brackets have been closed
+    :param l: list
+    :return: boolean
+    """
     s = Stack()
     openers = ["(", "{", "["]
 

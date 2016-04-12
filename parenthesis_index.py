@@ -4,9 +4,10 @@ string = "3(sd(f(sd)fhgjhg)h))gthg"
 
 def parenthesis_index(string, idx):
     """
+    Returns index of the closing parenthesis given the opening parenthesis
     :param string: string
-    :param idx: index of the opening parenthesis
-    :returns: index of the closing parenthesis given the opening parenthesis
+    :param idx: int
+    :return: int or None
     """
     parenthesis = 0
     if string[idx] == "(":

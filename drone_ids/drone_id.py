@@ -1,5 +1,3 @@
-import random
-
 # Your company delivers breakfast via autonomous quadcopter drones. And something mysterious has happened.
 # Each breakfast delivery is assigned a unique ID, a positive integer. When one of the company's 100 drones takes off with a delivery, the delivery's ID is added to a list, delivery_id_confirmations. When the drone comes back and lands, the ID is again added to the same list.
 #
@@ -9,8 +7,14 @@ import random
 #
 # The IDs are not guaranteed to be sorted or sequential. Orders aren't always fulfilled in the order they were received, and some deliveries get cancelled before takeoff.
 
-def drone_id():
+import random
 
+
+def drone_id():
+    """
+    Returns unique integers given txt file of duplicate integers
+    :return: int
+    """
     unique_ids = {}
     drone_ids = open("droneIDs.txt", "r").read()
 
